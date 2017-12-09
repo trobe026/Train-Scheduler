@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Train Scheduler</h1>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">Current Employees</div>
+          <!-- this is where we'll create our buttons -->
+          <div class="panel-body">
+              <div class="">
+                  <table class="table table-responsive" id="data">
+                      <tr>
+                          <th>Employee Name</th>
+                          <th>Role</th>
+                          <th>Start Date</th>
+                          <th>Months Worked</th>
+                          <th>Monthly Rate ($)</th>
+                          <th>Total Billed</th>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">Add Employee</div>
+
+              <form role="form">
+                  <div class="form-group">
+                      <label>Employee Name</label>
+                      <input type="text" class="form-control" id="name-input">
+                  </div>
+                  <div class="form-group">
+                      <label>Role</label>
+                      <input type="text" class="form-control" id="role-input">
+                  </div>
+                  <div class="form-group">
+                      <label>Start Date</label>
+                      <input type="text" class="form-control" id="date-input">
+                  </div>
+                  <div class="form-group">
+                      <label>Months Worked</label>
+                      <input type="text" class="form-control" id="months-input">
+                  </div>
+                  <div class="form-group">
+                      <label>Monthly Rate ($)</label>
+                      <input type="text" class="form-control" id="name-input">
+                  </div>
+                  <div class="form-group">
+                      <label>Total Billed</label>
+                      <input type="text" class="form-control" id="name-input">
+                      <button type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
+      <!-- This is where the images will go -->
+      <div id="gallery" class="row"></div>
+  </div>
+  <div class="row">
+      <div class="col-sm-12">
+          <!-- Line Break followed by closing -->
+          <hr>
+          <h5 class="text-center"><small>With proper maintenance, handling, storage, and urging, Plumbus will provide you with a lifetime of better living and happiness.</small></h5>
+      </div>
+  </div>
+  </div>
+
+    </div>
+  </body>
+</html>
