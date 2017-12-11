@@ -9,73 +9,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
         <h1>Train Scheduler</h1>
+        <h6>All Aboard!</h6>
       </div>
       <div class="panel panel-primary">
-          <div class="panel-heading">Current Employees</div>
-          <!-- this is where we'll create our buttons -->
-          <div class="panel-body">
+          <div class="panel-heading">Current Train Schedule</div>
+            <div class="panel-body">
               <div class="">
                   <table class="table table-responsive" id="data">
+                    <thead>
                       <tr>
-                          <th>Employee Name</th>
-                          <th>Role</th>
-                          <th>Start Date</th>
-                          <th>Months Worked</th>
-                          <th>Monthly Rate ($)</th>
-                          <th>Total Billed</th>
+                          <th>Train Name</th>
+                          <th>Destination</th>
+                          <th>Frequency (min)</th>
+                          <th>Next Arrival</th>
+                          <th>Minutes Away</th>
                       </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
                   </table>
               </div>
           </div>
       </div>
       <div class="panel panel-primary">
-          <div class="panel-heading">Add Employee</div>
+          <div class="panel-heading">Add Train</div>
 
               <form role="form">
                   <div class="form-group">
-                      <label>Employee Name</label>
-                      <input type="text" class="form-control" id="name-input">
+                      <label>Train Name</label>
+                      <input type="text" class="form-control" id="train-input">
                   </div>
                   <div class="form-group">
-                      <label>Role</label>
-                      <input type="text" class="form-control" id="role-input">
+                      <label>Destination</label>
+                      <input type="text" class="form-control" id="dest-input">
                   </div>
                   <div class="form-group">
-                      <label>Start Date</label>
-                      <input type="text" class="form-control" id="date-input">
+                      <label>First Train Time(HH:mm - military time)</label>
+                      <input type="text" class="form-control" id="time-input">
                   </div>
                   <div class="form-group">
-                      <label>Months Worked</label>
-                      <input type="text" class="form-control" id="months-input">
+                      <label>Frequency (min)</label>
+                      <input type="text" class="form-control" id="freq-input">
                   </div>
-                  <div class="form-group">
-                      <label>Monthly Rate ($)</label>
-                      <input type="text" class="form-control" id="name-input">
-                  </div>
-                  <div class="form-group">
-                      <label>Total Billed</label>
-                      <input type="text" class="form-control" id="name-input">
-                      <button type="submit">Submit</button>
+                      <button class="btn-primary" id="addTrain" type="submit">Submit</button>
               </form>
+            </div>
           </div>
-      </div>
       <!-- This is where the images will go -->
       <div id="gallery" class="row"></div>
-  </div>
-  <div class="row">
+    <div class="row">
       <div class="col-sm-12">
-          <!-- Line Break followed by closing -->
-          <hr>
-          <h5 class="text-center"><small>With proper maintenance, handling, storage, and urging, Plumbus will provide you with a lifetime of better living and happiness.</small></h5>
+          <h5 class="text-center"><small>&copy;Travis Roberts</small></h5>
       </div>
-  </div>
-  </div>
-
     </div>
   </body>
 </html>
