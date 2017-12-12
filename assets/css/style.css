@@ -10,3 +10,35 @@ body {
   color: orange;
   background-color: #343434;
 }
+
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  text-align: center;
+
+}
+
+th {
+  font-weight: bold;
+}
+
+.btn-danger {
+  margin-left: 25px;
+  font-size: 12px;
+}
+
+.btn-primary {
+  margin-bottom: 10px;
+}
+
+.panel-heading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group:first-child {
+  margin-top: 10px;
+}

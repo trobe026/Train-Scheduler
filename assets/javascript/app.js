@@ -1,5 +1,5 @@
 $( window ).on('load', function() {
-  
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCtS_aXBzOkMAnX94mlpNfhXwtZXGRdQf4",
@@ -102,29 +102,87 @@ $( window ).on('load', function() {
                   .addClass('remove btn-danger')
                   .text('Remove')
                   .click(function() {
-                    // $(row).remove();
-                    // $(ref.child).remove();
-                    // $(ref.child(trainList)).remove();
-                    // $(dest).remove();
-                    // $(freq).remove();
-                    // var firebaseData = ref.getInstance();
-                    $(childSnapshot.val()).removeValue();
-                    // console.log(firebaseData);
-                    // console.log(child.val());
-                    console.log(ref.val());
+                    $(row).remove();
+                    childSnapshot.ref.remove();
                     })
             )
-            .append(
-                $(document.createElement('button'))
-                    .addClass('edit btn-primary')
-                    .text('Edit')
-                    .click(function() {
-                      $(row)
-                        // edit functions to be added here...
+            // Attempted "edit" button functions here to no avail, how could this work?
+
+            // .append(
+            //     $(document.createElement('button'))
+            //         .addClass('edit btn-primary')
+            //         .text('Edit')
+            //         .click(function() {
+            //           // var edit = childSnapshot.ref;
+            //           // $(edit).each(function() {
+            //             // var trainData = [trainName, dest, trainTime, freq];
+            //             // console.log(trainData);
+            //             var newForm = $('td:nth-child(-n+3)').append('<input type="text" class="data form-control" value="Enter new value:">');
+            //             $('.data').each(function(index, value) {
+            //                 $('td:nth-child(-n+3)').append(
+            //                 $('<input>').attr({
+            //                 "type": "text",
+            //                 "class": "data form-control",
+            //                 "value": "Enter new value:",
+            //                 "id": index
+            //               })
+            //             )
+            //           ;
+            //
+            //
+            //               // console.log(newForm);
+            //               // $('.data').attr('id', [index]);
+            //
+            //             // })
+            //             // $('.data').each(function(index, value) {
+            //             //   var fields = [];
+            //             //   fields.push(index);
+            //             //   for (var i = 0; i < fields.length; i++) {
+            //             //     $('.data').attr({
+            //             //       'id': [i]
+            //             //     });
+            //             //     console.log(fields);
+            //             //   });
+            //
+            //
+            //             // ÷$(trainData).each(function(index, value) {
+            //
+            //                 // $(document.createElement('input'))
+            //                 //   // $('<input>').attr('type', 'text');
+            //                 //   .text('Enter new value:')
+            //               $('input').on('click', function() {
+            //                 $('.submit').hide();
+            //                 $(this).val('');
+            //                 // $(this).attr('id', index)
+            //                 console.log(this);
+            //                 $(buttons).append(
+            //                   $(document.createElement('button'))
+            //                       .addClass('submit btn-success')
+            //                       .text('Submit Changes')
+            //                       .click(function() {
+            //                         // $(row).remove();
+            //                         // $(ref.child(childSnapshot)).remove();
+            //                         // $(ref.child(trainList)).remove();
+            //                         // $(dest).remove();
+            //                         // $(freq).remove();
+            //                         // var firebaseData = ref.getInstance();
+            //
+            //                         // childSnapshot.ref.remove();
+            //                         // console.log(firebaseData);
+            //                         // console.log(child.val());
+            //                         console.log("string", childSnapshot.val());
+            //                         })
+            //                 )
+            //               });
+            //               $('.submit').on('click', function() {
+            //                 console.log('test');
+            //               });
+
+                      // })
                     })
-                  )
+                  })
+
           });
-  });
+
 
 // window load end
-});
